@@ -31,3 +31,19 @@ shift
 @echo SSHing to AWS instance as %AWS_PROFILE%
 aws ssm start-session --target %target% --document-name AWS-StartPortForwardingSession --parameters "{\"portNumber\": [\"8000\"], \"localPortNumber\": [\"8000\"]}"
 ```
+
+## Bash Scripts
+### SSO Login
+```
+#!/bin/bash
+
+PROFILE=$1
+
+if [ -z $PROFILE ]; then 
+    PROFILE=acast-com-dev
+fi
+
+echo Logging into AWS as $PROFILE
+aws sso login --profile $PROFILE
+export AWS_PROFILE=$PROFILE
+```
