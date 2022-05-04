@@ -33,6 +33,8 @@ aws ssm start-session --target %target% --document-name AWS-StartPortForwardingS
 ```
 
 ## Bash Scripts
+These scripts will need to be run sourced, i.e. `. script.sh`
+
 ### SSO Login
 ```
 #!/bin/bash
