@@ -42,7 +42,7 @@ These scripts will need to be run sourced, i.e. `. script.sh`
 PROFILE=$1
 
 if [ -z $PROFILE ]; then 
-    PROFILE=acast-com-dev
+    PROFILE=profile-name
 fi
 
 echo Logging into AWS as $PROFILE
